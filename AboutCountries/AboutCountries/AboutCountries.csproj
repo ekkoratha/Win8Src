@@ -1,0 +1,617 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3B1683E8-2256-4457-8B70-263C86DFE3C9}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AboutCountries</RootNamespace>
+    <AssemblyName>AboutCountries</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>AboutCountries_StoreKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <PackageCertificateThumbprint>20CC3EECA804CC325CFA50B411EB7C3A895C26C1</PackageCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <SDKReference Include="Callisto, Version=1.2.1">
+      <Name>Callisto</Name>
+    </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutUserControl.xaml.cs">
+      <DependentUpon>AboutUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\CountryDataSource.cs" />
+    <Compile Include="GroupedItemsPage.xaml.cs">
+      <DependentUpon>GroupedItemsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GroupDetailPage.xaml.cs">
+      <DependentUpon>GroupDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ItemDetailPage.xaml.cs">
+      <DependentUpon>ItemDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DataModel\SampleDataSource.cs" />
+    <Compile Include="Common\BindableBase.cs" />
+    <Compile Include="Common\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Common\BooleanNegationConverter.cs" />
+    <Compile Include="Common\LayoutAwarePage.cs" />
+    <Compile Include="Common\RichTextColumns.cs" />
+    <Compile Include="Common\SuspensionManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="AboutCountries_StoreKey.pfx" />
+    <None Include="Common\ReadMe.txt" />
+    <None Include="AboutCountries_TemporaryKey.pfx" />
+    <None Include="img\Ivory Coast" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\SmallLogo.png" />
+    <Content Include="Assets\SplashScreen.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\LightGray.png" />
+    <Content Include="Assets\MediumGray.png" />
+    <Content Include="Assets\DarkGray.png" />
+    <Content Include="Assets\WideLogo.png" />
+    <Content Include="Data\worldTime.xml" />
+    <Content Include="img\Afghanistan.png" />
+    <Content Include="img\Albania.png" />
+    <Content Include="img\Albania2.png" />
+    <Content Include="img\Algeria.png" />
+    <Content Include="img\Andorra.png" />
+    <Content Include="img\Angola.png" />
+    <Content Include="img\Antigua and Barbuda.png" />
+    <Content Include="img\Argentina.png" />
+    <Content Include="img\Armenia.png" />
+    <Content Include="img\Australia.png" />
+    <Content Include="img\Austria.png" />
+    <Content Include="img\Bahamas.png" />
+    <Content Include="img\Bahrain.png" />
+    <Content Include="img\Bangladesh.png" />
+    <Content Include="img\Barbados.png" />
+    <Content Include="img\Belarus.png" />
+    <Content Include="img\Belgium.png" />
+    <Content Include="img\Belize.PNG" />
+    <Content Include="img\Benin.png" />
+    <Content Include="img\Bhutan.png" />
+    <Content Include="img\Bolivia.png" />
+    <Content Include="img\Bosnia-Herzegovina.png" />
+    <Content Include="img\Botswana.png" />
+    <Content Include="img\Brazil.png" />
+    <Content Include="img\Brunei.png" />
+    <Content Include="img\Bulgaria.png" />
+    <Content Include="img\Burkina Faso.png" />
+    <Content Include="img\Burundi.png" />
+    <Content Include="img\Cambodia.png" />
+    <Content Include="img\Cameroon.png" />
+    <Content Include="img\Canada.png" />
+    <Content Include="img\Cape Verde.png" />
+    <Content Include="img\Central African Republic.png" />
+    <Content Include="img\Chad.png" />
+    <Content Include="img\Chile.png" />
+    <Content Include="img\China.png" />
+    <Content Include="img\Colombia.png" />
+    <Content Include="img\Comoros.png" />
+    <Content Include="img\Congo.png" />
+    <Content Include="img\Costa Rica.png" />
+    <Content Include="img\Croatia.png" />
+    <Content Include="img\Cuba.png" />
+    <Content Include="img\Cyprus.png" />
+    <Content Include="img\Czech Republic.png" />
+    <Content Include="img\Denmark.png" />
+    <Content Include="img\Djibouti.png" />
+    <Content Include="img\Dominica.png" />
+    <Content Include="img\Ecuador.png" />
+    <Content Include="img\Egypt.png" />
+    <Content Include="img\El Salvador.png" />
+    <Content Include="img\Equatorial Guinea.png" />
+    <Content Include="img\Eritrea.png" />
+    <Content Include="img\Estonia.png" />
+    <Content Include="img\Fiji.png" />
+    <Content Include="img\Finland.png" />
+    <Content Include="img\France.png" />
+    <Content Include="img\French Guyana.png" />
+    <Content Include="img\Gabon.png" />
+    <Content Include="img\Georgia.png" />
+    <Content Include="img\Germany.png" />
+    <Content Include="img\Ghana.png" />
+    <Content Include="img\Greece.png" />
+    <Content Include="img\Grenada.png" />
+    <Content Include="img\Guatemala.png" />
+    <Content Include="img\Guinea-Bissau.png" />
+    <Content Include="img\Guinea.png" />
+    <Content Include="img\Guyana.png" />
+    <Content Include="img\Haiti.png" />
+    <Content Include="img\Honduras.png" />
+    <Content Include="img\Hungary.png" />
+    <Content Include="img\Iceland.png" />
+    <Content Include="img\India.png" />
+    <Content Include="img\Indonesia.png" />
+    <Content Include="img\Iran.png" />
+    <Content Include="img\Iraq.png" />
+    <Content Include="img\Ireland.png" />
+    <Content Include="img\Israel.png" />
+    <Content Include="img\Italy.png" />
+    <Content Include="img\Jamaica.png" />
+    <Content Include="img\Japan.png" />
+    <Content Include="img\Jordan.png" />
+    <Content Include="img\Kazakhstan.png" />
+    <Content Include="img\Kenya.png" />
+    <Content Include="img\Korea  South.png" />
+    <Content Include="img\Korea North.png" />
+    <Content Include="img\Kosovo.png" />
+    <Content Include="img\Kuwait.png" />
+    <Content Include="img\Kyrgyzstan.png" />
+    <Content Include="img\Laos.png" />
+    <Content Include="img\Latvia.png" />
+    <Content Include="img\Lebanon.png" />
+    <Content Include="img\Lesotho.png" />
+    <Content Include="img\Liberia.png" />
+    <Content Include="img\Libya.png" />
+    <Content Include="img\Liechtenstein.png" />
+    <Content Include="img\Lithuania.png" />
+    <Content Include="img\Luxembourg.png" />
+    <Content Include="img\Macedonia.png" />
+    <Content Include="img\Madagascar.png" />
+    <Content Include="img\Malawi.png" />
+    <Content Include="img\Malaysia.png" />
+    <Content Include="img\Maldives.png" />
+    <Content Include="img\Mali.png" />
+    <Content Include="img\Malta.png" />
+    <Content Include="img\Mauritania.png" />
+    <Content Include="img\Mauritius.png" />
+    <Content Include="img\Mexico.png" />
+    <Content Include="img\Moldova.png" />
+    <Content Include="img\Monaco.png" />
+    <Content Include="img\Mongolia.png" />
+    <Content Include="img\Montenegro.png" />
+    <Content Include="img\Morocco.png" />
+    <Content Include="img\Mozambique.png" />
+    <Content Include="img\Myanmar.png" />
+    <Content Include="img\Namibia.png" />
+    <Content Include="img\Nauru.png" />
+    <Content Include="img\Nepal.png" />
+    <Content Include="img\Netherlands.png" />
+    <Content Include="img\New Zealand.png" />
+    <Content Include="img\Nicaragua.png" />
+    <Content Include="img\Niger.png" />
+    <Content Include="img\Nigeria.png" />
+    <Content Include="img\Norway.png" />
+    <Content Include="img\Oman.png" />
+    <Content Include="img\Pakistan.png" />
+    <Content Include="img\Panama.png" />
+    <Content Include="img\Papua New Guinea.png" />
+    <Content Include="img\Paraguay.png" />
+    <Content Include="img\Peru.png" />
+    <Content Include="img\Philippines.png" />
+    <Content Include="img\Poland.png" />
+    <Content Include="img\Portugal.png" />
+    <Content Include="img\Qatar.png" />
+    <Content Include="img\Romania.png" />
+    <Content Include="img\Russia.png" />
+    <Content Include="img\Rwanda.png" />
+    <Content Include="img\San Marino.png" />
+    <Content Include="img\Saudi Arabia.png" />
+    <Content Include="img\Senegal.png" />
+    <Content Include="img\Seychelles.png" />
+    <Content Include="img\Sierra Leone.png" />
+    <Content Include="img\Singapore.png" />
+    <Content Include="img\Slovakia.png" />
+    <Content Include="img\Slovenia.png" />
+    <Content Include="img\Solomon Islands.png" />
+    <Content Include="img\Somalia.png" />
+    <Content Include="img\South Africa.png" />
+    <Content Include="img\Spain.png" />
+    <Content Include="img\Sri Lanka.png" />
+    <Content Include="img\Sudan.png" />
+    <Content Include="img\Suriname.jpg" />
+    <Content Include="img\Swaziland.png" />
+    <Content Include="img\Sweden.png" />
+    <Content Include="img\Switzerland.png" />
+    <Content Include="img\Syria.png" />
+    <Content Include="img\Taiwan.png" />
+    <Content Include="img\Tajikistan.png" />
+    <Content Include="img\Tanzania.png" />
+    <Content Include="img\Thailand.png" />
+    <Content Include="img\The Gambia.png" />
+    <Content Include="img\Togo.png" />
+    <Content Include="img\Tonga.png" />
+    <Content Include="img\Trinidad and Tobago.png" />
+    <Content Include="img\Tunisia.png" />
+    <Content Include="img\Turkey.png" />
+    <Content Include="img\Turkmenistan.png" />
+    <Content Include="img\Uganda.png" />
+    <Content Include="img\Ukraine.png" />
+    <Content Include="img\United Arab Emirates.png" />
+    <Content Include="img\United Kingdom.png" />
+    <Content Include="img\United States of America.png" />
+    <Content Include="img\Uruguay.png" />
+    <Content Include="img\Uzbekistan.png" />
+    <Content Include="img\Vatican.png" />
+    <Content Include="img\Venezuela.png" />
+    <Content Include="img\Vietnam.png" />
+    <Content Include="img\Yemen.png" />
+    <Content Include="img\Yugoslavia.png" />
+    <Content Include="img\Zambia.png" />
+    <Content Include="img\Zimbabwe.png" />
+    <None Include="Package.StoreAssociation.xml" />
+    <Content Include="png\Afghanistan.png" />
+    <Content Include="png\Albania.png" />
+    <Content Include="png\Algeria.png" />
+    <Content Include="png\Andorra.png" />
+    <Content Include="png\Angola.png" />
+    <Content Include="png\Anguilla.png" />
+    <Content Include="png\Antarctica.png" />
+    <Content Include="png\Antigua and Barbuda.png" />
+    <Content Include="png\Arab League.png" />
+    <Content Include="png\Argentina.png" />
+    <Content Include="png\Armenia.png" />
+    <Content Include="png\Aruba.png" />
+    <Content Include="png\ASEAN.png" />
+    <Content Include="png\Australia.png" />
+    <Content Include="png\Austria.png" />
+    <Content Include="png\Azerbaijan.png" />
+    <Content Include="png\Bahamas.png" />
+    <Content Include="png\Bahrain.png" />
+    <Content Include="png\Bangladesh.png" />
+    <Content Include="png\Barbados.png" />
+    <Content Include="png\Belarus.png" />
+    <Content Include="png\Belgium.png" />
+    <Content Include="png\Belize.png" />
+    <Content Include="png\Benin.png" />
+    <Content Include="png\Bermuda.png" />
+    <Content Include="png\Bhutan.png" />
+    <Content Include="png\Bolivia.png" />
+    <Content Include="png\Bosnia-Herzegovina.png" />
+    <Content Include="png\Botswana.png" />
+    <Content Include="png\Brazil.png" />
+    <Content Include="png\Brunei.png" />
+    <Content Include="png\Bulgaria.png" />
+    <Content Include="png\Burkina Faso.png" />
+    <Content Include="png\Burundi.png" />
+    <Content Include="png\Cambodia.png" />
+    <Content Include="png\Cameroon.png" />
+    <Content Include="png\Canada.png" />
+    <Content Include="png\Cape Verde.png" />
+    <Content Include="png\CARICOM.png" />
+    <Content Include="png\Cayman Islands.png" />
+    <Content Include="png\Central African Republic.png" />
+    <Content Include="png\Chad.png" />
+    <Content Include="png\Chile.png" />
+    <Content Include="png\China.png" />
+    <Content Include="png\CIS.png" />
+    <Content Include="png\Colombia.png" />
+    <Content Include="png\Commonwealth.png" />
+    <Content Include="png\Comoros.png" />
+    <Content Include="png\Congo-Kinshasa.png" />
+    <Content Include="png\Congo.png" />
+    <Content Include="png\Cook Islands.png" />
+    <Content Include="png\Costa Rica.png" />
+    <Content Include="png\Croatia.png" />
+    <Content Include="png\Cuba.png" />
+    <Content Include="png\Cyprus.png" />
+    <Content Include="png\Czech Republic.png" />
+    <Content Include="png\Denmark.png" />
+    <Content Include="png\Djibouti.png" />
+    <Content Include="png\Dominica.png" />
+    <Content Include="png\Dominican Republic.png" />
+    <Content Include="png\Ecuador.png" />
+    <Content Include="png\Egypt.png" />
+    <Content Include="png\El Salvador.png" />
+    <Content Include="png\England.png" />
+    <Content Include="png\Equatorial Guinea.png" />
+    <Content Include="png\Eritrea.png" />
+    <Content Include="png\Estonia.png" />
+    <Content Include="png\Ethiopia.png" />
+    <Content Include="png\European Union.png" />
+    <Content Include="png\Faroes.png" />
+    <Content Include="png\Fiji.png" />
+    <Content Include="png\Finland.png" />
+    <Content Include="png\France.png" />
+    <Content Include="png\French Guyana.png" />
+    <Content Include="png\Gabon.png" />
+    <Content Include="png\Gambia.png" />
+    <Content Include="png\Georgia.png" />
+    <Content Include="png\Germany.png" />
+    <Content Include="png\Ghana.png" />
+    <Content Include="png\Gibraltar.png" />
+    <Content Include="png\Greece.png" />
+    <Content Include="png\Greenland.png" />
+    <Content Include="png\Grenada.png" />
+    <Content Include="png\Guadeloupe.png" />
+    <Content Include="png\Guam.png" />
+    <Content Include="png\Guatemala.png" />
+    <Content Include="png\Guernsey.png" />
+    <Content Include="png\Guinea-Bissau.png" />
+    <Content Include="png\Guinea.png" />
+    <Content Include="png\Guyana.png" />
+    <Content Include="png\Haiti.png" />
+    <Content Include="png\Honduras.png" />
+    <Content Include="png\Hong Kong.png" />
+    <Content Include="png\Hungary.png" />
+    <Content Include="png\Iceland.png" />
+    <Content Include="png\India.png" />
+    <Content Include="png\Indonesia.png" />
+    <Content Include="png\Iran.png" />
+    <Content Include="png\Iraq.png" />
+    <Content Include="png\Ireland.png" />
+    <Content Include="png\Islamic Conference.png" />
+    <Content Include="png\Isle of Man.png" />
+    <Content Include="png\Israel.png" />
+    <Content Include="png\Italy.png" />
+    <Content Include="png\Ivory Coast.png" />
+    <Content Include="png\Jamaica.png" />
+    <Content Include="png\Japan.png" />
+    <Content Include="png\Jersey.png" />
+    <Content Include="png\Jordan.png" />
+    <Content Include="png\Kazakhstan.png" />
+    <Content Include="png\Kenya.png" />
+    <Content Include="png\Kiribati.png" />
+    <Content Include="png\Korea  South.png" />
+    <Content Include="png\Korea North.png" />
+    <Content Include="png\Kosovo.png" />
+    <Content Include="png\Kuwait.png" />
+    <Content Include="png\Kyrgyzstan.png" />
+    <Content Include="png\Laos.png" />
+    <Content Include="png\Latvia.png" />
+    <Content Include="png\Lebanon.png" />
+    <Content Include="png\Lesotho.png" />
+    <Content Include="png\Liberia.png" />
+    <Content Include="png\Libya.png" />
+    <Content Include="png\Liechtenstein.png" />
+    <Content Include="png\Lithuania.png" />
+    <Content Include="png\Luxembourg.png" />
+    <Content Include="png\Macao.png" />
+    <Content Include="png\Macedonia.png" />
+    <Content Include="png\Madagascar.png" />
+    <Content Include="png\Malawi.png" />
+    <Content Include="png\Malaysia.png" />
+    <Content Include="png\Maldives.png" />
+    <Content Include="png\Mali.png" />
+    <Content Include="png\Malta.png" />
+    <Content Include="png\Marshall Islands.png" />
+    <Content Include="png\Martinique.png" />
+    <Content Include="png\Mauritania.png" />
+    <Content Include="png\Mauritius.png" />
+    <Content Include="png\Mexico.png" />
+    <Content Include="png\Micronesia.png" />
+    <Content Include="png\Moldova.png" />
+    <Content Include="png\Monaco.png" />
+    <Content Include="png\Mongolia.png" />
+    <Content Include="png\Montenegro.png" />
+    <Content Include="png\Montserrat.png" />
+    <Content Include="png\Morocco.png" />
+    <Content Include="png\Mozambique.png" />
+    <Content Include="png\Myanmar.png" />
+    <Content Include="png\Namibia.png" />
+    <Content Include="png\NATO.png" />
+    <Content Include="png\Nauru.png" />
+    <Content Include="png\Nepal.png" />
+    <Content Include="png\Netherlands Antilles.png" />
+    <Content Include="png\Netherlands.png" />
+    <Content Include="png\New Caledonia.png" />
+    <Content Include="png\New Zealand.png" />
+    <Content Include="png\Nicaragua.png" />
+    <Content Include="png\Niger.png" />
+    <Content Include="png\Nigeria.png" />
+    <Content Include="png\Northern Cyprus.png" />
+    <Content Include="png\Northern Ireland.png" />
+    <Content Include="png\Norway.png" />
+    <Content Include="png\Olimpic Movement.png" />
+    <Content Include="png\Oman.png" />
+    <Content Include="png\OPEC.png" />
+    <Content Include="png\Pakistan.png" />
+    <Content Include="png\Palau.png" />
+    <Content Include="png\Palestine.png" />
+    <Content Include="png\Panama.png" />
+    <Content Include="png\Papua New Guinea.png" />
+    <Content Include="png\Paraguay.png" />
+    <Content Include="png\Peru.png" />
+    <Content Include="png\Philippines.png" />
+    <Content Include="png\Poland.png" />
+    <Content Include="png\Portugal.png" />
+    <Content Include="png\Puerto Rico.png" />
+    <Content Include="png\Qatar.png" />
+    <Content Include="png\Red Cross.png" />
+    <Content Include="png\Reunion.png" />
+    <Content Include="png\Romania.png" />
+    <Content Include="png\Russia.png" />
+    <Content Include="png\Rwanda.png" />
+    <Content Include="png\Saint Lucia.png" />
+    <Content Include="png\Samoa.png" />
+    <Content Include="png\San Marino.png" />
+    <Content Include="png\Saudi Arabia.png" />
+    <Content Include="png\Scotland.png" />
+    <Content Include="png\Senegal.png" />
+    <Content Include="png\Serbia.png" />
+    <Content Include="png\Seychelles.png" />
+    <Content Include="png\Sierra Leone.png" />
+    <Content Include="png\Singapore.png" />
+    <Content Include="png\Slovakia.png" />
+    <Content Include="png\Slovenia.png" />
+    <Content Include="png\Solomon Islands.png" />
+    <Content Include="png\Somalia.png" />
+    <Content Include="png\Somaliland.png" />
+    <Content Include="png\South Africa.png" />
+    <Content Include="png\Spain.png" />
+    <Content Include="png\Sri Lanka.png" />
+    <Content Include="png\St Kitts and Nevis.png" />
+    <Content Include="png\St Vincent &amp; the Grenadines.png" />
+    <Content Include="png\Sudan.png" />
+    <Content Include="png\Suriname.png" />
+    <Content Include="png\Swaziland.png" />
+    <Content Include="png\Sweden.png" />
+    <Content Include="png\Switzerland.png" />
+    <Content Include="png\Syria.png" />
+    <Content Include="png\Tahiti.png" />
+    <Content Include="png\Taiwan.png" />
+    <Content Include="png\Tajikistan.png" />
+    <Content Include="png\Tanzania.png" />
+    <Content Include="png\Thailand.png" />
+    <Content Include="png\The Gambia.png" />
+    <Content Include="png\Timor-Leste.png" />
+    <Content Include="png\Togo.png" />
+    <Content Include="png\Tonga.png" />
+    <Content Include="png\Trinidad and Tobago.png" />
+    <Content Include="png\Tunisia.png" />
+    <Content Include="png\Turkey.png" />
+    <Content Include="png\Turkmenistan.png" />
+    <Content Include="png\Turks and Caicos Islands.png" />
+    <Content Include="png\Tuvalu.png" />
+    <Content Include="png\Uganda.png" />
+    <Content Include="png\Ukraine.png" />
+    <Content Include="png\United Arab Emirates.png" />
+    <Content Include="png\United Kingdom.png" />
+    <Content Include="png\United Nations.png" />
+    <Content Include="png\United States of America.png" />
+    <Content Include="png\Uruguay.png" />
+    <Content Include="png\Uzbekistan.png" />
+    <Content Include="png\Vanuatu.png" />
+    <Content Include="png\Vatican.png" />
+    <Content Include="png\Venezuela.png" />
+    <Content Include="png\Vietnam.png" />
+    <Content Include="png\Virgin Islands British.png" />
+    <Content Include="png\Virgin Islands US.png" />
+    <Content Include="png\Wales.png" />
+    <Content Include="png\Western Sahara.png" />
+    <Content Include="png\Yemen.png" />
+    <Content Include="png\Yugoslavia.png" />
+    <Content Include="png\Zambia.png" />
+    <Content Include="png\Zimbabwe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="AboutUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Common\StandardStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GroupedItemsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GroupDetailPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ItemDetailPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
+    <VisualStudioVersion>11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
