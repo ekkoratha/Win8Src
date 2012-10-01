@@ -6,10 +6,238 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DesignHeight="300"
-    d:DesignWidth="400">
-    
-    <Grid>
+    d:DesignWidth="480" Height="626.55">
 
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Ellipse Margin="68,197,102,207" Grid.Row="1" Stroke="Black">
+            <Ellipse.Fill>
+                <!--    <RadialGradientBrush> -->
+                <LinearGradientBrush>
+                    <GradientStop Color="#FFD2B273" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.313"/>
+                </LinearGradientBrush><!--</RadialGradientBrush>-->
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse Margin="73,184,108,232" Grid.Row="1" Stroke="Black">
+            <Ellipse.Fill>
+                <LinearGradientBrush EndPoint="0.882,0.105" StartPoint="0.244,0.743">
+                    <GradientStop Color="#FFDDB66A" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse Margin="77,187,110,236" Grid.Row="1" Stroke="Black" Fill="#FFEDE8C6"/>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <!--StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="Sundial Application" Style="{StaticResource PhoneTextNormalStyle}" HorizontalAlignment="Center" FontWeight="Bold" FontSize="18.667"/>
+        </StackPanel>-->
+        <Ellipse Margin="103,207,138,260" Grid.Row="1" Stroke="Black" Fill="#FFE0D0B3"/>
+        <Ellipse Margin="148,236,181,294" Grid.Row="1" Stroke="Black" Fill="#FFD6C8AF"/>
+
+        <Path Data="M258,554 L279.5,532" HorizontalAlignment="Right" Margin="0,221.158,195.816,0" Grid.Row="1" Stretch="Fill" Stroke="#FFB6852B" UseLayoutRounding="False" Width="22.5" Height="23" VerticalAlignment="Top">
+            <Path.Fill>
+                <LinearGradientBrush EndPoint="0.882,0.105" StartPoint="0.244,0.743">
+                    <GradientStop Color="#FFDDB66A"/>
+                    <GradientStop Color="#FF9D7E4E" Offset="1"/>
+                </LinearGradientBrush>
+            </Path.Fill>
+        </Path>
+
+        <Path Data="M280.5,566.5 L312.5,549" HorizontalAlignment="Right" Margin="0,240.566,170.105,0" Grid.Row="1" Stretch="Fill" Stroke="#FFC49C52" UseLayoutRounding="False" Width="33" Height="18.5" VerticalAlignment="Top">
+            <Path.Fill>
+                <LinearGradientBrush EndPoint="0.882,0.105" StartPoint="0.244,0.743">
+                    <GradientStop Color="#FFDDB66A"/>
+                    <GradientStop Color="#FF9D7E4E" Offset="1"/>
+                </LinearGradientBrush>
+            </Path.Fill>
+        </Path>
+        <Path Data="M293,589 L330,579.5" HorizontalAlignment="Right" Margin="0,262.815,151.947,0" Grid.Row="1" Stretch="Fill" Stroke="#FFB29C74" UseLayoutRounding="False" Width="38" Height="10.5" VerticalAlignment="Top">
+            <Path.Fill>
+                <LinearGradientBrush EndPoint="0.882,0.105" StartPoint="0.244,0.743">
+                    <GradientStop Color="#FFDDB66A"/>
+                    <GradientStop Color="#FF9D7E4E" Offset="1"/>
+                </LinearGradientBrush>
+            </Path.Fill>
+        </Path>
+        <Path Data="M279,597 L319,605" HorizontalAlignment="Right" Margin="0,291.13,142.632,0" Grid.Row="1" Stretch="Fill" Stroke="#FFB29C74" UseLayoutRounding="False" Width="44.5" Height="2" VerticalAlignment="Top">
+            <Path.Fill>
+                <LinearGradientBrush EndPoint="0.882,0.105" StartPoint="0.244,0.743">
+                    <GradientStop Color="#FFDDB66A"/>
+                    <GradientStop Color="#FF9D7E4E" Offset="1"/>
+                </LinearGradientBrush>
+            </Path.Fill>
+        </Path>
+        <Path Data="M255.5,621.5 L300.27612,644.71997" HorizontalAlignment="Right" Margin="0,298.25,145.25,311.5" Grid.Row="1" Stretch="Fill" Stroke="#FFB29C74" UseLayoutRounding="False" Width="40.5">
+            <Path.Fill>
+                <LinearGradientBrush EndPoint="0.882,0.105" StartPoint="0.244,0.743">
+                    <GradientStop Color="#FFDDB66A"/>
+                    <GradientStop Color="#FF9D7E4E" Offset="1"/>
+                </LinearGradientBrush>
+            </Path.Fill>
+        </Path>
+        <Path Data="M258.5,618.5 L296,640" HorizontalAlignment="Right" Margin="0,309.75,161,293.75" Grid.Row="1" Stretch="Fill" Stroke="#FFB29C74" UseLayoutRounding="False" Width="34.75">
+            <Path.Fill>
+                <LinearGradientBrush EndPoint="0.882,0.105" StartPoint="0.244,0.743">
+                    <GradientStop Color="#FFDDB66A"/>
+                    <GradientStop Color="#FF9D7E4E" Offset="1"/>
+                </LinearGradientBrush>
+            </Path.Fill>
+        </Path>
+
+
+        <Path Data="M255.5,-1851 L293,-1829.5" Margin="224.5,283.5,200,0" Grid.Row="1" Stretch="Fill" Stroke="#FF7A683E" UseLayoutRounding="False" Height="4" VerticalAlignment="Top" StrokeThickness="3" RenderTransformOrigin="0.5,0.5" Fill="#FFBA944F">
+            <Path.RenderTransform>
+                <CompositeTransform ScaleY="-1" TranslateY="-1"/>
+            </Path.RenderTransform>
+        </Path>
+        <Path Data="M273,199.51505 L254,231.51505" Fill="#FFF7F3F3" Margin="237.168,282.25,199.75,304.499" Grid.Row="1" Stretch="Fill" Stroke="#FF7A683E" StrokeThickness="3" UseLayoutRounding="False"/>
+        <Path Data="M-383.5,268" Fill="#FFF7F3F3" HorizontalAlignment="Left" Height="0" Margin="-383.5,196,0,0" Grid.Row="1" Stretch="Fill" Stroke="#FFC0A767" StrokeThickness="5" UseLayoutRounding="False" VerticalAlignment="Top" Width="0"/>
+        <Path Data="M258.5,618.5 L296,640" HorizontalAlignment="Right" Margin="0,0,179,280" Grid.Row="1" Stretch="Fill" Stroke="#FFB29C74" UseLayoutRounding="False" Width="29.25" Height="25.5" VerticalAlignment="Bottom">
+            <Path.Fill>
+                <LinearGradientBrush EndPoint="0.882,0.105" StartPoint="0.244,0.743">
+                    <GradientStop Color="#FFDDB66A"/>
+                    <GradientStop Color="#FF9D7E4E" Offset="1"/>
+                </LinearGradientBrush>
+            </Path.Fill>
+        </Path>
+        <Path Data="M258.5,618.5 L296,640" HorizontalAlignment="Right" Margin="0,0,203.333,268.999" Grid.Row="1" Stretch="Fill" Stroke="#FFB29C74" UseLayoutRounding="False" Width="19.5" Height="31.5" VerticalAlignment="Bottom">
+            <Path.Fill>
+                <LinearGradientBrush EndPoint="0.882,0.105" StartPoint="0.244,0.743">
+                    <GradientStop Color="#FFDDB66A"/>
+                    <GradientStop Color="#FF9D7E4E" Offset="1"/>
+                </LinearGradientBrush>
+            </Path.Fill>
+        </Path>
+        <Path Data="M258.5,618.5 L296,640" Margin="0,0,226.833,264" Grid.Row="1" Stretch="Fill" Stroke="#FFB29C74" UseLayoutRounding="False" Height="31.829" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="12.012">
+            <Path.Fill>
+                <LinearGradientBrush EndPoint="0.882,0.105" StartPoint="0.244,0.743">
+                    <GradientStop Color="#FFDDB66A"/>
+                    <GradientStop Color="#FF9D7E4E" Offset="1"/>
+                </LinearGradientBrush>
+            </Path.Fill>
+        </Path>
+        <Path Data="M258.5,618.5 L296,640" Margin="228.655,0,0,260" Grid.Row="1" Stretch="Fill" Stroke="#FFB29C74" UseLayoutRounding="False" Height="34.829" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="1">
+            <Path.Fill>
+                <LinearGradientBrush EndPoint="0.882,0.105" StartPoint="0.244,0.743">
+                    <GradientStop Color="#FFDDB66A"/>
+                    <GradientStop Color="#FF9D7E4E" Offset="1"/>
+                </LinearGradientBrush>
+            </Path.Fill>
+        </Path>
+        <Path Data="M258.5,618.5 L296,640" Margin="207.905,0,0,261" Grid.Row="1" Stretch="Fill" Stroke="#FFB29C74" UseLayoutRounding="False" Height="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="3.69" RenderTransformOrigin="0.5,0.5">
+            <Path.RenderTransform>
+                <CompositeTransform ScaleX="-1"/>
+            </Path.RenderTransform>
+            <Path.Fill>
+                <LinearGradientBrush EndPoint="0.882,0.105" StartPoint="0.244,0.743">
+                    <GradientStop Color="#FFDDB66A"/>
+                    <GradientStop Color="#FF9D7E4E" Offset="1"/>
+                </LinearGradientBrush>
+            </Path.Fill>
+        </Path>
+        <Path Data="M258.5,618.5 L296,640" Margin="154.913,0,0,273.465" Grid.Row="1" Stretch="Fill" Stroke="#FFB29C74" UseLayoutRounding="False" Height="33.195" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="20.42" RenderTransformOrigin="0.5,0.5">
+            <Path.RenderTransform>
+                <CompositeTransform ScaleX="-1" Rotation="4.792"/>
+            </Path.RenderTransform>
+            <Path.Fill>
+                <LinearGradientBrush EndPoint="0.882,0.105" StartPoint="0.244,0.743">
+                    <GradientStop Color="#FFDDB66A"/>
+                    <GradientStop Color="#FF9D7E4E" Offset="1"/>
+                </LinearGradientBrush>
+            </Path.Fill>
+        </Path>
+
+        <Path Data="M258.5,618.5 L226,640" Margin="180.62,0,0,264" Grid.Row="1" Stretch="Fill" Stroke="#FFB29C74" UseLayoutRounding="False" Height="34.5" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="12.975" RenderTransformOrigin="0.5,0.5">
+            <Path.Fill>
+                <LinearGradientBrush EndPoint="0.882,0.105" StartPoint="0.244,0.743">
+                    <GradientStop Color="#FFDDB66A"/>
+                    <GradientStop Color="#FF9D7E4E" Offset="1"/>
+                </LinearGradientBrush>
+            </Path.Fill>
+        </Path>
+        <Path Data="M258.5,618.5 L296,640" Margin="127.748,305.78,0,291.408" Grid.Row="1" Stretch="Fill" Stroke="#FFB29C74" UseLayoutRounding="False" HorizontalAlignment="Left" Width="31.447" RenderTransformOrigin="0.5,0.5">
+            <Path.RenderTransform>
+                <CompositeTransform ScaleX="-1" Rotation="4.792"/>
+            </Path.RenderTransform>
+            <Path.Fill>
+                <LinearGradientBrush EndPoint="0.882,0.105" StartPoint="0.244,0.743">
+                    <GradientStop Color="#FFDDB66A"/>
+                    <GradientStop Color="#FF9D7E4E" Offset="1"/>
+                </LinearGradientBrush>
+            </Path.Fill>
+        </Path>
+        <Path Data="M258.5,618.5 L296,640" Margin="105.656,289.4,0,0" Grid.Row="1" Stretch="Fill" Stroke="#FFB29C74" UseLayoutRounding="False" HorizontalAlignment="Left" Width="46.272" RenderTransformOrigin="0.5,0.5" Height="15.911" VerticalAlignment="Top">
+            <Path.RenderTransform>
+                <CompositeTransform ScaleX="-1" Rotation="4.792"/>
+            </Path.RenderTransform>
+            <Path.Fill>
+                <LinearGradientBrush EndPoint="0.882,0.105" StartPoint="0.244,0.743">
+                    <GradientStop Color="#FFDDB66A"/>
+                    <GradientStop Color="#FF9D7E4E" Offset="1"/>
+                </LinearGradientBrush>
+            </Path.Fill>
+        </Path>
+        <Path Data="M258.5,618.5 L296,640" Margin="106,273.385,0,0" Grid.Row="1" Stretch="Fill" Stroke="#FFB29C74" UseLayoutRounding="False" HorizontalAlignment="Left" Width="45.916" RenderTransformOrigin="0.5,0.5" Height="1.06" VerticalAlignment="Top">
+            <Path.RenderTransform>
+                <CompositeTransform ScaleX="-1" Rotation="4.792" ScaleY="-1"/>
+            </Path.RenderTransform>
+            <Path.Fill>
+                <LinearGradientBrush EndPoint="0.882,0.105" StartPoint="0.244,0.743">
+                    <GradientStop Color="#FFDDB66A"/>
+                    <GradientStop Color="#FF9D7E4E" Offset="1"/>
+                </LinearGradientBrush>
+            </Path.Fill>
+        </Path>
+        <Path Data="M258.5,618.5 L296,640" Margin="120,245.51,0,0" Grid.Row="1" Stretch="Fill" Stroke="#FFB29C74" UseLayoutRounding="False" HorizontalAlignment="Left" Width="40.451" RenderTransformOrigin="0.5,0.5" Height="10.49" VerticalAlignment="Top">
+            <Path.RenderTransform>
+                <CompositeTransform ScaleX="-1" Rotation="4.792" ScaleY="-1"/>
+            </Path.RenderTransform>
+            <Path.Fill>
+                <LinearGradientBrush EndPoint="0.882,0.105" StartPoint="0.244,0.743">
+                    <GradientStop Color="#FFDDB66A"/>
+                    <GradientStop Color="#FF9D7E4E" Offset="1"/>
+                </LinearGradientBrush>
+            </Path.Fill>
+        </Path>
+
+        <TextBlock Foreground="Black"  HorizontalAlignment="Right" Height="21" Margin="0,203,183,0" Grid.Row="1" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" Width="12" FontSize="16" FontFamily="Tahoma" />
+        <TextBlock Foreground="Black"  HorizontalAlignment="Right" Height="19" Margin="0,225,149,0" Grid.Row="1" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="15" FontSize="16" FontFamily="Tahoma" />
+        <TextBlock Foreground="Black"  HorizontalAlignment="Right" Height="21" Margin="0,247,135,0" Grid.Row="1" TextWrapping="Wrap" Text="6" VerticalAlignment="Top" Width="12" FontSize="16" FontFamily="Tahoma" />
+        <TextBlock Foreground="Black"  HorizontalAlignment="Right" Height="21" Margin="0,278,120,0" Grid.Row="1" TextWrapping="Wrap" Text="7" VerticalAlignment="Top" Width="12" FontSize="16" FontFamily="Tahoma" />
+        <TextBlock Foreground="Black"  HorizontalAlignment="Right" Height="21" Margin="0,306,127,297" Grid.Row="1" TextWrapping="Wrap" Text="8" Width="12" FontSize="16" FontFamily="Tahoma" />
+        <TextBlock Foreground="Black"  HorizontalAlignment="Right" Margin="0,0,144,275" Grid.Row="1" TextWrapping="Wrap" Text="9" Width="12" FontSize="16" FontFamily="Tahoma" Height="21" VerticalAlignment="Bottom" />
+        <TextBlock Foreground="Black"  HorizontalAlignment="Right" Margin="0,0,158,259" Grid.Row="1" TextWrapping="Wrap" Text="10" Width="23" FontSize="14.667" FontFamily="Tahoma" Height="21" VerticalAlignment="Bottom" />
+        <TextBlock Foreground="Black"  HorizontalAlignment="Right" Margin="0,0,184,247" Grid.Row="1" TextWrapping="Wrap" Text="11" Width="23" FontSize="14.667" FontFamily="Tahoma" Height="21" VerticalAlignment="Bottom" />
+        <TextBlock Foreground="Black"  HorizontalAlignment="Right" Margin="0,0,208,239" Grid.Row="1" TextWrapping="Wrap" Text="12" Width="23" FontSize="14.667" FontFamily="Tahoma" Height="21" VerticalAlignment="Bottom" />
+        <TextBlock Foreground="Black"  Margin="225,0,0,238" Grid.Row="1" TextWrapping="Wrap" Text="1" FontSize="16" FontFamily="Tahoma" Height="21" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="12"/>
+        <TextBlock Foreground="Black"  Margin="203,0,0,239" Grid.Row="1" TextWrapping="Wrap" Text="2" FontSize="16" FontFamily="Tahoma" Height="21" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="12"/>
+        <TextBlock Foreground="Black"  Margin="176,0,0,244" Grid.Row="1" TextWrapping="Wrap" Text="3" FontSize="16" FontFamily="Tahoma" Height="21" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="12" />
+        <TextBlock Foreground="Black"  Margin="145,0,0,255" Grid.Row="1" TextWrapping="Wrap" Text="4" FontSize="16" FontFamily="Tahoma" Height="21" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="12"/>
+        <TextBlock Foreground="Black"  Margin="116,0,0,275" Grid.Row="1" TextWrapping="Wrap" Text="5" FontSize="16" FontFamily="Tahoma" Height="21" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="12"/>
+        <TextBlock Foreground="Black"  Margin="95,295,0,308" Grid.Row="1" TextWrapping="Wrap" Text="6" FontSize="16" FontFamily="Tahoma" HorizontalAlignment="Left" Width="12" />
+        <TextBlock Foreground="Black"  Margin="92,260,0,0" Grid.Row="1" TextWrapping="Wrap" Text="7" FontSize="16" FontFamily="Tahoma" HorizontalAlignment="Left" Width="12" Height="21" VerticalAlignment="Top" />
+        <TextBlock Foreground="Black"  Margin="107,229,0,0" Grid.Row="1" TextWrapping="Wrap" Text="8" FontSize="16" FontFamily="Tahoma" HorizontalAlignment="Left" Width="12" Height="21" VerticalAlignment="Top"/>
+
+        <Path x:Name="triangle" Data="M273,199.51505 L290,231.51505" Fill="#FFF7F3F3" Margin="226.5,284.25,0,304.5" Grid.Row="1" Stretch="Fill" Stroke="#FF7A683E" StrokeThickness="3" UseLayoutRounding="False" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="13.5" />
+
+        <Path x:Name="shadow1" Data="M251,208 L261,300" 
+              Margin="228.655,286.5,250.345,260" Grid.Row="1" Fill="#FF210B0B" Stretch="Fill" Stroke="#FF33312D"
+              UseLayoutRounding="False" 
+              HorizontalAlignment="Right" VerticalAlignment="Bottom" 
+              RenderTransformOrigin="0.5,0.5" Visibility="Collapsed"/>
+
+
+        <Path x:Name="shadow2" Data="M238,324.00107 L230,387.00137"
+              Fill="#FFF7F3F3" Margin="0,0,241,260" Stretch="Fill" Stroke="#FF211E17" 
+              UseLayoutRounding="False" Grid.Row="1" 
+              HorizontalAlignment="Right"  VerticalAlignment="Bottom"
+              Width="9.2" RenderTransformOrigin="0.5,0.5" Height="49.6" Visibility="Collapsed"/>
+       
     </Grid>
 </UserControl>

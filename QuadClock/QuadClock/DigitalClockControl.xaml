@@ -9,7 +9,8 @@
     d:DesignHeight="300"
     d:DesignWidth="400">
     
-    <Grid>
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+        <TextBlock Name="TimeTxt" Text="00:00:00" FontSize="36"></TextBlock>
 
     </Grid>
 </UserControl>

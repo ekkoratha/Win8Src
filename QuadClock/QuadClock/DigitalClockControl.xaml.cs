@@ -21,6 +21,21 @@ namespace QuadClock
         public DigitalClockControl()
         {
             this.InitializeComponent();
+             Loaded += new RoutedEventHandler(onLoad);
+        }
+
+        public void onLoad(object o, RoutedEventArgs e)
+        {
+            DispatcherTimer tmr = new DispatcherTimer();
+            tmr.Interval = TimeSpan.FromSeconds(1);
+            tmr.Tick += Draw;
+            tmr.Start();
+        }
+
+        private void Draw(object sender, object e)
+        {
+
+            TimeTxt.Text = DateTime.Now.ToString("t");
         }
     }
 }

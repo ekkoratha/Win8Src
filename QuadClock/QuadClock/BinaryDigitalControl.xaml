@@ -8,8 +8,76 @@
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="400">
-    
-    <Grid>
 
+    <Grid x:Name="LayoutRoot" Height="190" Width="300"><!--ShowGridLines="False"--> 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <!-- This column will receive all remaining width -->
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+
+            <!-- This row will receive all remaining Height -->
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <!--<Image Source="PNG/green_light.png" Grid.Row="0" Grid.Column="1" Width="20" Height="20" Name="On"/>-->
+        <!--<TextBlock  Height="30" Width="36" Grid.Row="0" Grid.Column="2" FontSize="15" TextAlignment="Center" Text="1">ON</TextBlock>-->
+        <TextBlock  Height="16" Width="36" Grid.Row="0" Grid.Column="3" FontSize="15" ></TextBlock>
+        <!--<Image Source="PNG/yellow_light.png" Grid.Row="0" Grid.Column="5" Width="20" Height="20" Name="Off"/>-->
+        <!--<TextBlock  Height="30" Width="36" Grid.Row="0" Grid.Column="6" FontSize="15" TextAlignment="Center" Text="0">OFF</TextBlock>-->
+        <TextBlock  Height="30" Width="36" Grid.Row="0" Grid.Column="6" FontSize="10" ></TextBlock>
+        <TextBlock  Height="30" Width="36" Grid.Row="0" Grid.Column="7" FontSize="10" ></TextBlock>
+
+        <TextBlock  Height="30" Width="36" Grid.Row="1" Grid.Column="0" FontSize="15"  TextAlignment="Center">8</TextBlock>
+        <TextBlock  Height="30" Width="36" Grid.Row="2" Grid.Column="0" FontSize="15"  TextAlignment="Center">4</TextBlock>
+        <TextBlock  Height="30" Width="36" Grid.Row="3" Grid.Column="0" FontSize="15"  TextAlignment="Center">2</TextBlock>
+        <TextBlock  Height="30" Width="36" Grid.Row="4" Grid.Column="0" FontSize="15"  TextAlignment="Center">1</TextBlock>
+        <TextBlock  Height="30" Width="36" Grid.Row="5" Grid.Column="0" FontSize="15" ></TextBlock>
+        <!-- HH -->
+        <TextBlock  Height="30" Width="30" Grid.Row="5" Grid.Column="1" FontSize="15"  TextAlignment="Center">H</TextBlock>
+        <TextBlock  Height="30" Width="36" Grid.Row="5" Grid.Column="2" FontSize="15" TextAlignment="Center">H</TextBlock>
+        <!-- MM -->
+        <TextBlock  Height="30" Width="36" Grid.Row="5" Grid.Column="3" FontSize="15" TextAlignment="Center">M</TextBlock>
+        <TextBlock  Height="30" Width="36" Grid.Row="5" Grid.Column="4" FontSize="15" TextAlignment="Center" >M</TextBlock>
+        <!-- SS -->
+        <TextBlock  Height="30" Width="36" Grid.Row="5" Grid.Column="5" FontSize="15" TextAlignment="Center">S</TextBlock>
+        <TextBlock  Height="30" Width="36" Grid.Row="5" Grid.Column="6" FontSize="15" TextAlignment="Center">S</TextBlock>
+        <!-- HH01-->
+        <Image Source="PNG/yellow_light.png" Grid.Row="4" Grid.Column="1" Width="20" Height="20" Name="h10"/>
+        <Image Source="PNG/yellow_light.png" Grid.Row="3" Grid.Column="1" Width="20" Height="20" Name="h11"/>
+
+        <Image Source="PNG/yellow_light.png" Grid.Row="4" Grid.Column="2" Width="20" Height="20" Name="h00"/>
+        <Image Source="PNG/yellow_light.png" Grid.Row="3" Grid.Column="2" Width="20" Height="20" Name="h01"/>
+        <Image Source="PNG/yellow_light.png" Grid.Row="2" Grid.Column="2" Width="20" Height="20" Name="h02"/>
+        <Image Source="PNG/yellow_light.png" Grid.Row="1" Grid.Column="2" Width="20" Height="20" Name="h03"/>
+        <!-- MM01-->
+        <Image Source="PNG/yellow_light.png" Grid.Row="4" Grid.Column="3" Width="20" Height="20" Name="m10"/>
+        <Image Source="PNG/yellow_light.png" Grid.Row="3" Grid.Column="3" Width="20" Height="20" Name="m11"/>
+        <Image Source="PNG/yellow_light.png" Grid.Row="2" Grid.Column="3" Width="20" Height="20" Name="m12"/>
+
+        <Image Source="PNG/yellow_light.png" Grid.Row="4" Grid.Column="4" Width="20" Height="20" Name="m00"/>
+        <Image Source="PNG/yellow_light.png" Grid.Row="3" Grid.Column="4" Width="20" Height="20" Name="m01"/>
+        <Image Source="PNG/yellow_light.png" Grid.Row="2" Grid.Column="4" Width="20" Height="20" Name="m02"/>
+        <Image Source="PNG/yellow_light.png" Grid.Row="1" Grid.Column="4" Width="20" Height="20" Name="m03"/>
+        <!-- SS01-->
+        <Image Source="PNG/yellow_light.png" Grid.Row="4" Grid.Column="5" Width="20" Height="20" Name="s10"/>
+        <Image Source="PNG/yellow_light.png" Grid.Row="3" Grid.Column="5" Width="20" Height="20" Name="s11"/>
+        <Image Source="PNG/yellow_light.png" Grid.Row="2" Grid.Column="5" Width="20" Height="20" Name="s12"/>
+
+        <Image Source="PNG/yellow_light.png" Grid.Row="4" Grid.Column="6" Width="20" Height="20" Name="s00"/>
+        <Image Source="PNG/yellow_light.png" Grid.Row="3" Grid.Column="6" Width="20" Height="20" Name="s01"/>
+        <Image Source="PNG/yellow_light.png" Grid.Row="2" Grid.Column="6" Width="20" Height="20" Name="s02"/>
+        <Image Source="PNG/yellow_light.png" Grid.Row="1" Grid.Column="6" Width="20" Height="20" Name="s03"/>
     </Grid>
 </UserControl>
