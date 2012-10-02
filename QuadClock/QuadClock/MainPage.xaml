@@ -7,48 +7,131 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="48" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0">
-            <TextBlock Name="Header" Text=" Quad Clock" FontSize="50" />
-        </StackPanel>
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
+    <Grid  Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid x:Name="FullView" >
             <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
+                <RowDefinition Height="48" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <local:AnalogClockControl 
+            <StackPanel Grid.Row="0">
+                <TextBlock Name="Header" Text=" Quad Clock" FontSize="50" />
+            </StackPanel>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <local:AnalogClockControl 
                 Grid.Column="0" 
                 Grid.Row="0"                 
                 HorizontalAlignment="Center" 
-                VerticalAlignment="Center" />                
-            <local:BinaryDigitalControl 
+                VerticalAlignment="Center" />
+                <local:BinaryDigitalControl 
                 Grid.Column="1" 
                 Grid.Row="1" 
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center"/>
-                <!--Width="100" Height="100" Margin="43,16,0,0"  />-->
-            <local:DigitalClockControl 
+                <local:DigitalClockControl 
                 Grid.Column="1" 
                 Grid.Row="0" 
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center"/>
-                <!--Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="43,16,0,0" VerticalAlignment="Top" Width="100"/>-->
-            <local:SundialClockControl 
+                <local:SundialClockControl 
                 Grid.Column="0" 
                 Grid.Row="1" 
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center" 
                 Width="480" Height="626" />
-                <!--HorizontalAlignment="Left" Width="480" Height="696" Margin="186,156,0,0" Grid.Row="1" VerticalAlignment="Top" />-->
-
+            </Grid>
         </Grid>
+
+
+        <Grid x:Name="SnappedView" Visibility="Collapsed" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="48" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0">
+                <TextBlock Name="SnappedHeader" Text=" Quad Clock" FontSize="50" />
+            </StackPanel>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="48" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <local:AnalogClockControl 
+                Grid.Column="0" 
+                Grid.Row="0"                 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center" />
+                <local:BinaryDigitalControl 
+                Grid.Column="0" 
+                Grid.Row="2" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center"/>
+                <local:DigitalClockControl 
+                Grid.Column="0" 
+                Grid.Row="1" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center"/>
+                <local:SundialClockControl 
+                Grid.Column="0" 
+                Grid.Row="3" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center" 
+                Width="480" Height="626" />
+            </Grid>
+        </Grid>
+
+        <VisualStateManager.VisualStateGroups>
+
+            <!-- Visual states reflect the application's view state -->
+            <VisualStateGroup x:Name="ApplicationViewStates">
+                <VisualState x:Name="FullScreenPortrait"/>
+                <VisualState x:Name="FullScreenLandscape"/>
+                <VisualState x:Name="Filled"/>
+
+                <!-- The entire page respects the narrower 100-pixel margin convention for portrait -->
+                <!--<VisualState x:Name="FullScreenPortrait">
+                <Storyboard>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="backButton" Storyboard.TargetProperty="Style">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PortraitBackButtonStyle}"/>
+                    </ObjectAnimationUsingKeyFrames>
+
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="itemGridView" Storyboard.TargetProperty="Padding">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="100,126,90,0"/>
+                    </ObjectAnimationUsingKeyFrames>
+                </Storyboard>
+            </VisualState>-->
+
+                <!--
+                    The back button and title have different styles when snapped, and the list representation is substituted
+                    for the grid displayed in all other view states
+                -->
+                <VisualState x:Name="Snapped">
+                    <Storyboard>
+                        <!--<ObjectAnimationUsingKeyFrames Storyboard.TargetName="backButton" Storyboard.TargetProperty="Style">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource SnappedBackButtonStyle}"/>
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="pageTitle" Storyboard.TargetProperty="Style">
+                        <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource SnappedPageHeaderTextStyle}"/>
+                    </ObjectAnimationUsingKeyFrames>-->
+
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SnappedView" Storyboard.TargetProperty="Visibility">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="FullView" Storyboard.TargetProperty="Visibility">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Visible"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
     </Grid>
 </Page>

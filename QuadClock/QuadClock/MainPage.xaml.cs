@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -24,6 +25,33 @@ namespace QuadClock
         public MainPage()
         {
             this.InitializeComponent();
+            SizeChanged += MainPage_SizeChanged;
+        }
+
+        private void MainPage_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            InvalidateSize();
+        }
+        
+        private void InvalidateSize()
+        {
+            // Get the window width
+            double windowWidth = this.ActualWidth;
+            InvalidateViewState();
+        }
+
+        private void InvalidateViewState()
+        {
+            if (ApplicationView.Value == ApplicationViewState.Snapped)
+            {
+                SnappedView.Visibility = Visibility.Visible;
+                FullView.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                SnappedView.Visibility = Visibility.Collapsed;
+                FullView.Visibility = Visibility.Visible;
+            }
         }
 
         /// <summary>
