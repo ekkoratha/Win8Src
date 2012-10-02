@@ -34,11 +34,12 @@ namespace QuadClock
 
         private void Draw(object sender, object e)
         {
-            DateTime dtCurrentTime = DateTime.Now;
-            TimeTxt.Text = dtCurrentTime.ToLongTimeString();
+            var formatter = new Windows.Globalization.DateTimeFormatting.DateTimeFormatter("longtime");
+            DateTime dateToFormat = DateTime.Now;
+            TimeTxt.Text = formatter.Format(dateToFormat);
 
-            DateTime myTime = DateTime.Now;
-            TimeTxt.Text = myTime.ToLongTimeString();//ToString("t");
+            //DateTime myTime = DateTime.Now;
+            //TimeTxt.Text = myTime.ToLongTimeString();//ToString("t");
         }
     }
 }
