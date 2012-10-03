@@ -1643,9 +1643,9 @@
 
     <!-- Grid-appropriate 250 pixel square item template as seen in the GroupedItemsPage and ItemsPage -->
     <DataTemplate x:Key="Standard250x250ItemTemplate">
-        <Grid HorizontalAlignment="Left" Width="125" Height="125">
+        <Grid HorizontalAlignment="Left" Width="150" Height="150">
             <!--<Grid HorizontalAlignment="Left" Width="250" Height="250">-->
-                <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}">
+             <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}">
                 <!--<Image Source="{Binding Image}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>-->
                 <Image Source="{Binding Img}" Width="40" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" AutomationProperties.Name="{Binding Title}"/>
             </Border>

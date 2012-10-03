@@ -108,6 +108,19 @@ namespace AboutCountries
             });
 
             args.Request.ApplicationCommands.Add(about);
+
+            var preferences =  new SettingsCommand("preferences", "Preferences", (handler) =>
+            {
+                var settings = new SettingsFlyout();
+                settings.Content = new PreferenceUserControl();
+                settings.HeaderBrush = new SolidColorBrush(_background);
+                settings.Background = new SolidColorBrush(_background);
+                settings.HeaderText = "Preferences";
+                settings.IsOpen = true;
+            });
+
+            args.Request.ApplicationCommands.Add(preferences);
+
         }
 
         /// <summary>

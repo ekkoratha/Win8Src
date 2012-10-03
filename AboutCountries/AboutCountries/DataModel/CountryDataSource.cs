@@ -36,6 +36,7 @@ namespace AboutCountries.Data
     public abstract class CountryDataCommon : AboutCountries.Common.BindableBase
     {
         internal  static Uri _baseUri = new Uri("ms-appx:///");
+        internal readonly int MaxItems = 20;
 
         public CountryDataCommon(int uniqueId, String name, String currency, String imagePath)
         {
@@ -308,7 +309,7 @@ namespace AboutCountries.Data
             //
             // A maximum of 12 items are displayed because it results in filled grid columns
             // whether there are 1, 2, 3, 4, or 6 rows displayed
-            get { return this._items.Take(12); }
+            get { return this._items.Take(MaxItems); }
         }
 
         private string _description = string.Empty;
