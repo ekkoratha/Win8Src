@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="58234Ekkoratha.AboutCountries" Publisher="CN=397B099C-5259-4CD2-95CF-D20FC8A87235" Version="1.0.0.5" />
+  <Identity Name="58234Ekkoratha.AboutCountries" Publisher="CN=397B099C-5259-4CD2-95CF-D20FC8A87235" Version="1.0.0.6" />
   <Properties>
     <DisplayName>About Countries</DisplayName>
     <PublisherDisplayName>Ekkoratha</PublisherDisplayName>

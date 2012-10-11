@@ -61,9 +61,11 @@
                         UserControl chosen as the templated item because it supports visual state management
                         Loaded/unloaded events explicitly subscribe to view state updates from the page
                     -->
+                    
                     <UserControl Loaded="StartLayoutUpdates" Unloaded="StopLayoutUpdates">
+                        
                         <ScrollViewer x:Name="scrollViewer" Style="{StaticResource HorizontalScrollViewerStyle}" Grid.Row="1">
-
+                            
                             <!-- Content is allowed to flow across as many columns as needed -->
                             <common:RichTextColumns x:Name="richTextColumns" Margin="117,0,117,47">
                                 <RichTextBlock x:Name="richTextBlock" Width="560" Style="{StaticResource ItemRichTextStyle}" IsTextSelectionEnabled="False">
@@ -75,9 +77,28 @@
                                     </Paragraph>
                                     <Paragraph LineStackingStrategy="MaxHeight">
                                         <InlineUIContainer>
-                                            <Image x:Name="image" MaxHeight="240" Margin="0,20,0,10" Stretch="Uniform" Source="{Binding CountryImg}" AutomationProperties.Name="{Binding Name}"/>
+                                            <Grid > 
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                                </Grid.ColumnDefinitions>
+                                                <Grid Background="White">
+                                                <Image  x:Name="image" HorizontalAlignment="Center" VerticalAlignment="Center" MaxHeight="240" Margin="0,20,0,10" Stretch="Uniform" Source="{Binding CountryImg}" AutomationProperties.Name="{Binding Name}"/>
+                                                </Grid>
+                                                <!--<Grid Grid.Column="1">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="*"></RowDefinition>
+                                                        <RowDefinition Height="*"></RowDefinition>
+                                                    </Grid.RowDefinitions>
+                                                    <TextBlock> Local time</TextBlock>
+                                                    <local:AnalogClockControl Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                                </Grid>-->
+                                            </Grid>                                            
                                         </InlineUIContainer>
+                                        
                                     </Paragraph>
+                            
+                                    
                                     <Paragraph>
                                         <Run FontWeight="Normal" Text=" Laugage "/> <Run FontWeight="SemiLight" Text="{Binding Language}"/>
                                     </Paragraph>
@@ -91,10 +112,6 @@
                                     <Paragraph>
                                         <Run FontWeight="Normal" Text=" Dial Code +"/><Run FontWeight="Bold" Text="{Binding DialCode}"/>
                                     </Paragraph>
-                                    <Paragraph>
-                                        <Run FontWeight="Normal" Text=" UTC "/>
-                                        <Run FontWeight="SemiLight" Text="{Binding LocalTime}"/>
-                                    </Paragraph>
 
                                     <Paragraph>
                                         <Run FontWeight="Normal" Text=" Longitude "/>
@@ -103,7 +120,15 @@
                                         <Run FontWeight="Normal" Text="   Latitude "/>
                                         <Run FontWeight="SemiLight" Text="{Binding Latitude}"/>
                                     </Paragraph>
+                                    <Paragraph>
+                                        <Run FontWeight="Normal" Text=" UTC "/>
+                                        <Run FontWeight="SemiLight" Text="{Binding LocalTime}"/>
+                                    </Paragraph>
+
                                 </RichTextBlock>
+                                
+                                    
+                                
 
                                 <!-- Additional columns are created from this template -->
                                 <common:RichTextColumns.ColumnTemplate>

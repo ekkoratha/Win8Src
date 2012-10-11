@@ -1,0 +1,27 @@
+﻿<UserControl
+    x:Class="AboutCountries.AnalogClockControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:QuadClock"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400" Height="140" Width="151">
+
+    <Grid x:Name="LayoutRoot">
+        <Canvas Name="ClockLayout" Height="140" Width="150" Margin="0,0,114,0" d:IsLocked="True">
+            <Ellipse Visibility="Collapsed" x:Name="outerCasing"  Height="140"  Width="151" StrokeThickness="8">
+                <Ellipse.Stroke>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="#FF8D95A5" Offset="1"/>
+                    </LinearGradientBrush>
+                </Ellipse.Stroke>
+                <Ellipse.Fill>
+                    <SolidColorBrush>White</SolidColorBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+        </Canvas>
+    </Grid>
+</UserControl>

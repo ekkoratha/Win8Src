@@ -1825,6 +1825,7 @@
 
     <Style x:Key="LayoutRootStyle" TargetType="Panel">
         <Setter Property="Background" Value="{StaticResource ApplicationPageBackgroundThemeBrush}"/>
+        <!--<Setter Property="Background" Value="Beige"/>-->
         <Setter Property="ChildrenTransitions">
             <Setter.Value>
                 <TransitionCollection>

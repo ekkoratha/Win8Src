@@ -109,17 +109,28 @@ namespace AboutCountries
 
             args.Request.ApplicationCommands.Add(about);
 
-            var preferences =  new SettingsCommand("preferences", "Preferences", (handler) =>
+            var preferences = new SettingsCommand("Privacy", "Privacy Policy", (handler) =>
             {
                 var settings = new SettingsFlyout();
-                settings.Content = new PreferenceUserControl();
+                settings.Content = new PrivacyPolicyControl();
                 settings.HeaderBrush = new SolidColorBrush(_background);
                 settings.Background = new SolidColorBrush(_background);
-                settings.HeaderText = "Preferences";
+                settings.HeaderText = "Privacy Policy";
                 settings.IsOpen = true;
             });
 
             args.Request.ApplicationCommands.Add(preferences);
+            //var preferences =  new SettingsCommand("preferences", "Preferences", (handler) =>
+            //{
+            //    var settings = new SettingsFlyout();
+            //    settings.Content = new PreferenceUserControl();
+            //    settings.HeaderBrush = new SolidColorBrush(_background);
+            //    settings.Background = new SolidColorBrush(_background);
+            //    settings.HeaderText = "Preferences";
+            //    settings.IsOpen = true;
+            //});
+
+            //args.Request.ApplicationCommands.Add(preferences);
 
         }
 
