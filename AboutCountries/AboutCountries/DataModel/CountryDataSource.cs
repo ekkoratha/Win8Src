@@ -11,7 +11,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using System.Net.Http;
-using Windows.Data.Json;
 using Windows.ApplicationModel;
 using Windows.Storage.Streams;
 using System.Threading.Tasks;
@@ -19,17 +18,10 @@ using Windows.Storage;
 using System.Xml.Linq;
 using System.IO;
 
-// The data model defined by this file serves as a representative example of a strongly-typed
-// model that supports notification when members are added, removed, or modified.  The property
-// names chosen coincide with data bindings in the standard item templates.
-//
-// Applications may use this model as a starting point and build on it, or discard it entirely and
-// replace it with something appropriate to their needs.
-
 namespace AboutCountries.Data
 {
     /// <summary>
-    /// Base class for <see cref="RecipeDataItem"/> and <see cref="RecipeDataGroup"/> that
+    /// Base class for <see cref="CountryDataItem"/> and <see cref="CountryDataGroup"/> that
     /// defines properties common to both.
     /// </summary>
     [Windows.Foundation.Metadata.WebHostHidden]
@@ -40,10 +32,10 @@ namespace AboutCountries.Data
 
         public CountryDataCommon(int uniqueId, String name, String currency, String imagePath)
         {
-            this._uniqueId = uniqueId; // ID
-            this._name = name;   // Name
-            this._currency = currency; // Currency
-            this._imagePath = imagePath; //Img
+            this._uniqueId = uniqueId; 
+            this._name = name;  
+            this._currency = currency; 
+            this._imagePath = imagePath; 
         }
 
         private int _uniqueId = -1;
@@ -54,13 +46,13 @@ namespace AboutCountries.Data
         }
 
         private string _name = string.Empty;
-        public string Name //Title  
+        public string Name 
         {
             get { return this._name; }
             set { this.SetProperty(ref this._name, value); }
         }
         private char _key = '#';
-        public char Key //Title  
+        public char Key 
         {
             get { return this._key; }
             set
@@ -70,7 +62,7 @@ namespace AboutCountries.Data
             }
         }
         private string _currency = string.Empty;
-        public string Currency  //short title
+        public string Currency  
         {
             get { return this._currency; }
             set { this.SetProperty(ref this._currency, value); }
@@ -146,7 +138,7 @@ namespace AboutCountries.Data
             this._startDate = startDate;
             this._endDate = endDate;
             this._utc = utc;
-            this.Img = imagePath;
+            this.MapImage = imagePath;
             this._region = region;
             this._longitude = longitude;
             this._latitude = latitude;
@@ -227,11 +219,11 @@ namespace AboutCountries.Data
             set { this.SetProperty(ref this._language, value); }
         }
 
-        private string _img = string.Empty;
-        public string Img
+        private string _mapImage = string.Empty; // map image
+        public string MapImage
         {
-            get { return this._img; }
-            set { this.SetProperty(ref this._img, value); }
+            get { return this._mapImage; }
+            set { this.SetProperty(ref this._mapImage, value); }
         }    
                 
         private CountryDataGroup _group;
@@ -453,7 +445,7 @@ namespace AboutCountries.Data
                 cc.Currency = e.Element("Currency").Value;
                 cc.Region = e.Element("Region").Value;
                 cc.UTC = e.Element("UTC").Value;
-                cc.Img = "png/" + (e.Element("Name").Value) + ".png";
+                cc.MapImage = "png/" + (e.Element("Name").Value) + ".png";
                 cc.CountryImg = "img/" + (e.Element("Name").Value) + ".png";
                 cc.StartDate = e.Element("StartDate").Value;
                 cc.EndDate = e.Element("EndDate").Value;
