@@ -31,7 +31,7 @@ namespace QuadClock
             //b1.UriSource = new Uri(@"PNG/green_light.png", UriKind.Relative);
             
             b0.UriSource = new Uri(_baseUri, @"PNG/yellow_light.png");//new Uri(@"PNG/yellow_light.png", UriKind.Relative);
-            b1.UriSource = new Uri(_baseUri, @"PNG/green_light.png");//new Uri(@"PNG/green_light.png", UriKind.Relative);
+            b1.UriSource = new Uri(_baseUri, @"PNG/blue_light.png");//new Uri(@"PNG/green_light.png", UriKind.Relative);
 
             Loaded += new RoutedEventHandler(onLoad);
         }

@@ -9,8 +9,8 @@
     d:DesignHeight="300"
     d:DesignWidth="400">
     
-    <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
-        <TextBlock Name="TimeTxt" Text="00:00:00" FontSize="36"></TextBlock>
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Height="70" >
+        <TextBlock Name="TimeTxt" Text="00:00:00" FontFamily="/Fonts/QuartzMS.TTF#QUARTZ MS"  FontSize="48"></TextBlock>
 
     </Grid>
 </UserControl>

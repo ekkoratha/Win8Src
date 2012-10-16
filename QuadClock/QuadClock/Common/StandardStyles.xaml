@@ -24,6 +24,7 @@
             <x:String x:Key="BackButtonGlyph">&#xE071;</x:String>
             <x:String x:Key="BackButtonSnappedGlyph">&#xE0C4;</x:String>
         </ResourceDictionary>
+        
     </ResourceDictionary.ThemeDictionaries>
 
     <x:String x:Key="ChevronGlyph">&#xE26B;</x:String>
@@ -1403,6 +1404,9 @@
     -->
 
     <!-- Title area styles -->
+    <Style x:Key="DigitalTimeTextStyle" TargetType="TextBlock" >
+        <Setter Property="FontFamily" Value="QuartzMS"/>
+    </Style>
 
     <Style x:Key="PageHeaderTextStyle" TargetType="TextBlock" BasedOn="{StaticResource HeaderTextStyle}">
         <Setter Property="TextWrapping" Value="NoWrap"/>
