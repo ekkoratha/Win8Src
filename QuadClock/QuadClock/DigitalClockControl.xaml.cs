@@ -34,9 +34,10 @@ namespace QuadClock
 
         private void Draw(object sender, object e)
         {
-            var formatter = new Windows.Globalization.DateTimeFormatting.DateTimeFormatter("longtime");
-            DateTime dateToFormat = DateTime.Now;
-            TimeTxt.Text = formatter.Format(dateToFormat);
+            //var formatter = new Windows.Globalization.DateTimeFormatting.DateTimeFormatter("longtime");
+            //DateTime dateToFormat = DateTime.Now;
+            //TimeTxt.Text = formatter.Format(dateToFormat);
+            TimeTxt.Text = DateTime.Now.ToString("HH:mm:ss");
 
             //DateTime myTime = DateTime.Now;
             //TimeTxt.Text = myTime.ToLongTimeString();//ToString("t");
