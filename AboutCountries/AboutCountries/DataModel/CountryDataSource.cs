@@ -44,7 +44,6 @@ namespace AboutCountries.Data
             get { return this._uniqueId; }
             set { this.SetProperty(ref this._uniqueId, value); }
         }
-
         private string _name = string.Empty;
         public string Name 
         {
@@ -398,34 +397,20 @@ namespace AboutCountries.Data
             return null;
         }
 
-        public static async Task LoadLocalDataAsync()
+        public static async Task LoadXMLData()
         {
-            // Retrieve Country data from Countrys.txt
-           // var file = await Package.Current.InstalledLocation.GetFileAsync("Data\\worldTime.xml");
-         //   var result = await FileIO.ReadTextAsync(file);
-
-            //int i = 0;
-            // XDocument doc = await XDocument.Load("Data\\worldTime.xml");
-            //_countryLookup = new Dictionary<int, Country>();
-
             var sf = await Package.Current.InstalledLocation.GetFileAsync(@"Data\worldTime.xml");
             var file = await sf.OpenAsync(FileAccessMode.Read);
             Stream inStream = file.AsStreamForRead();
 
             XDocument doc = XDocument.Load(inStream);
             CreateCountrysAndCountryGroups(doc);
-
-            // Parse the JSON Country data
-            //var countrys = JsonArray.Parse(result);
-
-            //// Convert the JSON objects into CountryDataItems and CountryDataGroups
-            //CreateCountrysAndCountryGroups(countrys);
         }
 
         private static void CreateCountrysAndCountryGroups(XDocument doc)
         {
             int i = 0;
-            char prevKey ='-';
+
             foreach (XElement e in doc.Descendants("Country"))
             {
                 CountryDataItem cc = new CountryDataItem();
@@ -433,14 +418,8 @@ namespace AboutCountries.Data
                
                 cc.Name = e.Element("Name").Value;                
                 char key = char.ToUpper(cc.Name[0]);
-                cc.Key = key;
-
-                if (key != prevKey)
-                {
-                    
-                    prevKey = key; 
-                }i++;
-                cc.UniqueId = i;
+                cc.Key = key;                
+                cc.UniqueId = ++i;
                 cc.Capital = e.Element("Capital").Value;
                 cc.Currency = e.Element("Currency").Value;
                 cc.Region = e.Element("Region").Value;
@@ -455,12 +434,7 @@ namespace AboutCountries.Data
                 cc.Language = e.Element("Language").Value;
                 cc.DialCode = e.Element("DialCode").Value;
 
-                
-
-                //_countryLookup[i++] = cc;
-
-               // group = _countryDataSource.AllGroups.FirstOrDefault(c => c.UniqueId.Equals(cc.UniqueId));
-              group = _countryDataSource.AllGroups.FirstOrDefault(c => c.Key.Equals(key));
+                group = _countryDataSource.AllGroups.FirstOrDefault(c => c.Key.Equals(key));
 
                 if (group == null)
                     group = CreateCountryGroup(cc);
@@ -468,10 +442,8 @@ namespace AboutCountries.Data
                 cc.Group = group;
 
                 if (group != null)
-                    group.Items.Add(cc);
-                
-            }
-           
+                    group.Items.Add(cc);                
+            }           
         }
         
         private static CountryDataGroup CreateCountryGroup(CountryDataItem cc)
@@ -482,9 +454,6 @@ namespace AboutCountries.Data
             group.Currency = cc.Currency;
             group.Capital = cc.Capital;
             group.Key = cc.Key;
-
-           
-
             _countryDataSource.AllGroups.Add(group);
             return group;
         }

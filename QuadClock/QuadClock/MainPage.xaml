@@ -7,15 +7,33 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid  Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+    <!--<Grid  Background="{StaticResource ApplicationPageBackgroundThemeBrush}">-->
+        <!--<Rectangle
+    Stroke="Black"
+    StrokeThickness="4">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="Assets/background.PNG" />
+            </Rectangle.Fill>
+        </Rectangle>-->
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/background.PNG"></ImageBrush>
+        </Grid.Background>
+
         <Grid x:Name="FullView" >
             <Grid.RowDefinitions>
-                <RowDefinition Height="48" />
+                <RowDefinition Height="56" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <StackPanel Grid.Row="0">
-                <TextBlock Name="Header" Text=" Quad Clock" FontSize="50" />
+            <!--<Border Grid.Row="0" BorderBrush="#FFFFFFF3" CornerRadius="5,5,5,5" BorderThickness="2,2,2,2">-->
+                <StackPanel Grid.Row="0" VerticalAlignment="Center">
+                    <!--Foreground="#FF252323"  #FF252A30-->
+                <TextBlock Name="Header" Text=" Quad Clock" FontSize="50"  FontFamily="Fonts/QuartzMS.TTF#Quartz MS" Height="76" />
             </StackPanel>
+              
+            <!--</Border>-->
+            
+            
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
@@ -25,67 +43,82 @@
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <local:AnalogClockControl 
-                Grid.Column="0" 
-                Grid.Row="0"                 
-                HorizontalAlignment="Center" 
-                VerticalAlignment="Center" />
-                <local:BinaryDigitalControl 
-                Grid.Column="1" 
-                Grid.Row="1" 
-                HorizontalAlignment="Center" 
-                VerticalAlignment="Center"/>
-                <local:DigitalClockControl 
-                Grid.Column="1" 
-                Grid.Row="0" 
-                HorizontalAlignment="Center" 
-                VerticalAlignment="Center"/>
-                <local:SundialClockControl 
-                Grid.Column="0" 
-                Grid.Row="1" 
-                HorizontalAlignment="Center" 
-                VerticalAlignment="Center" 
-                Width="480" Height="626" />
+                <Border Grid.Row="0" Grid.Column="0" BorderBrush="#FFFFFFF3" CornerRadius="5,5,5,5" BorderThickness="2,2,2,2">
+                    <local:AnalogClockControl 
+                    Grid.Column="0" 
+                    Grid.Row="0"                 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" />
+                </Border>
+                <Border Grid.Row="1" Grid.Column="1" BorderBrush="#FFFFFFF3" CornerRadius="5,5,5,5" BorderThickness="2,2,2,2">
+                    <local:BinaryDigitalControl 
+                    Grid.Column="1" 
+                    Grid.Row="1" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center"/>
+                </Border>
+                <Border Grid.Row="0" Grid.Column="1" BorderBrush="#FFFFFFF3" CornerRadius="5,5,5,5" BorderThickness="2,2,2,2">
+                    <local:DigitalClockControl 
+                    Grid.Column="1" 
+                    Grid.Row="0" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center"/>
+                </Border>
+                <Border Grid.Row="1" Grid.Column="0" BorderBrush="#FFFFFFF3" CornerRadius="5,5,5,5" BorderThickness="2,2,2,2">
+                    <local:SundialClockControl 
+                    Grid.Column="0" 
+                    Grid.Row="1" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    Width="480" Height="626" />
+                </Border>
             </Grid>
         </Grid>
 
 
         <Grid x:Name="SnappedView" Visibility="Collapsed" >
             <Grid.RowDefinitions>
-                <RowDefinition Height="48" />
+                <RowDefinition Height="56" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <StackPanel Grid.Row="0">
-                <TextBlock Name="SnappedHeader" Text=" Quad Clock" FontSize="50" />
+                <!--<TextBlock Name="SnappedHeader" Text=" Quad Clock" FontSize="50" />-->
+                <TextBlock Name="SnappedHeader" Text=" Quad Clock" FontSize="50"  FontFamily="Fonts/QuartzMS.TTF#Quartz MS" Height="60" />
             </StackPanel>
             <Grid Grid.Row="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
-                    <RowDefinition Height="48" />
+                    <RowDefinition Height="56" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <local:AnalogClockControl 
-                Grid.Column="0" 
-                Grid.Row="0"                 
-                HorizontalAlignment="Center" 
-                VerticalAlignment="Center" />
-                <local:BinaryDigitalControl 
-                Grid.Column="0" 
-                Grid.Row="2" 
-                HorizontalAlignment="Center" 
-                VerticalAlignment="Center"/>
-                <local:DigitalClockControl 
-                Grid.Column="0" 
-                Grid.Row="1" 
-                HorizontalAlignment="Center" 
-                VerticalAlignment="Center"/>
-                <local:SundialClockControl 
-                Grid.Column="0" 
-                Grid.Row="3" 
-                HorizontalAlignment="Center" 
-                VerticalAlignment="Center" 
-                Width="480" Height="626" />
+                
+                <Border Grid.Row="0" Grid.Column="0" BorderBrush="#FFFFFFF3" CornerRadius="5,5,5,5" BorderThickness="2,2,2,2">
+                    <local:AnalogClockControl 
+                    Grid.Row="0" Grid.Column="0" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" />
+                </Border>
+                <Border Grid.Row="2" Grid.Column="0" BorderBrush="#FFFFFFF3" CornerRadius="5,5,5,5" BorderThickness="2,2,2,2">
+                    <local:BinaryDigitalControl 
+                    Grid.Row="2" Grid.Column="0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"/>
+                </Border>
+                <Border Grid.Row="1" Grid.Column="0"  BorderBrush="#FFFFFFF3" CornerRadius="5,5,5,5" BorderThickness="2,2,2,2">
+                    <local:DigitalClockControl 
+                    Grid.Row="1" Grid.Column="0" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center"/>
+                </Border>
+                <Border Grid.Row="3" Grid.Column="0" BorderBrush="#FFFFFFF3" CornerRadius="5,5,5,5" BorderThickness="2,2,2,2">
+                    <local:SundialClockControl 
+                    Grid.Row="3" Grid.Column="0"                    
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    Width="480" Height="626" />
+                </Border>
+                
             </Grid>
         </Grid>
 

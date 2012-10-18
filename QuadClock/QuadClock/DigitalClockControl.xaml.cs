@@ -12,7 +12,6 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
 
 namespace QuadClock
 {
@@ -36,11 +35,15 @@ namespace QuadClock
         {
             //var formatter = new Windows.Globalization.DateTimeFormatting.DateTimeFormatter("longtime");
             //DateTime dateToFormat = DateTime.Now;
-            //TimeTxt.Text = formatter.Format(dateToFormat);
-            TimeTxt.Text = DateTime.Now.ToString("HH:mm:ss");
+            //TimeTxt.Text = formatter.Format(dateToFormat); 
+            //TimeTxt.Text = DateTime.Now.ToString("HH:mm:ss");
 
             //DateTime myTime = DateTime.Now;
             //TimeTxt.Text = myTime.ToLongTimeString();//ToString("t");
+
+            var formatter = new Windows.Globalization.DateTimeFormatting.DateTimeFormatter("{hour.integer}:{minute.integer(2)}:{second.integer(2)}");
+            DateTime dateToFormat = DateTime.Now;
+            TimeTxt.Text = formatter.Format(dateToFormat);             
         }
     }
 }

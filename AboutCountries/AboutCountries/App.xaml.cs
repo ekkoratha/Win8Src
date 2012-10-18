@@ -55,7 +55,7 @@ namespace AboutCountries
             
             if (rootFrame == null)
             {
-                await CountryDataSource.LoadLocalDataAsync();
+                await CountryDataSource.LoadXMLData();
                 // Create a Frame to act as the navigation context and navigate to the first page
                 rootFrame = new Frame();
                 //Associate the frame with a SuspensionManager key                                

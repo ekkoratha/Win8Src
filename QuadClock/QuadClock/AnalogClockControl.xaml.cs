@@ -89,8 +89,8 @@ namespace QuadClock
                     line.Y2 = (Height / 2) + Math.Cos((step * i) * (Math.PI / 180)) * outerRadiusY;
 
                     var textblock = new TextBlock();
-                    textblock.FontFamily = new FontFamily("verdana");
-                    textblock.FontSize = 14;
+                   // textblock.FontFamily = new FontFamily("verdana");
+                    textblock.FontSize = 12;
                     SolidColorBrush mytextBrush = new SolidColorBrush(Color.FromArgb(255, 0, 0, 0));
 
                     textblock.Foreground = mytextBrush;

@@ -127,6 +127,8 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="Assets\background.PNG" />
+    <Content Include="Assets\circle_grey.png" />
     <Content Include="Fonts\QuartzMS.TTF" />
     <None Include="QuadClock_TemporaryKey.pfx" />
   </ItemGroup>
