@@ -29,6 +29,8 @@ namespace AboutCountries
     /// </summary>
     sealed partial class App : Application
     {
+        MyTime myTime = new MyTime();
+
         private Color _background = Color.FromArgb(255, 0, 77, 96);
         /// <summary>
         /// Initializes the singleton Application object.  This is the first line of authored code
@@ -38,6 +40,7 @@ namespace AboutCountries
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            myTime.init();
         }
 
         /// <summary>

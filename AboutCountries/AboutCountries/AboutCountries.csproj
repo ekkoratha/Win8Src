@@ -125,6 +125,7 @@
     <Compile Include="ItemDetailPage.xaml.cs">
       <DependentUpon>ItemDetailPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MyTime.cs" />
     <Compile Include="PreferenceUserControl.xaml.cs">
       <DependentUpon>PreferenceUserControl.xaml</DependentUpon>
     </Compile>

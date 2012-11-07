@@ -185,7 +185,7 @@
         </Path>
         <Path Data="M258.5,618.5 L296,640" Margin="122,273.385,0,0" Grid.Row="1" Stretch="Fill" Stroke="#FFB29C74" UseLayoutRounding="False" HorizontalAlignment="Left" Width="45.916" RenderTransformOrigin="0.5,0.5" Height="1.06" VerticalAlignment="Top">
             <Path.RenderTransform>
-                <CompositeTransform ScaleX="-1" Rotation="4.792" ScaleY="-1"/>
+                <CompositeTransform Rotation="-175.208"/>
             </Path.RenderTransform>
             <Path.Fill>
                 <LinearGradientBrush EndPoint="0.882,0.105" StartPoint="0.244,0.743">
@@ -196,7 +196,7 @@
         </Path>
         <Path Data="M258.5,618.5 L296,640" Margin="136,245.51,0,0" Grid.Row="1" Stretch="Fill" Stroke="#FFB29C74" UseLayoutRounding="False" HorizontalAlignment="Left" Width="40.451" RenderTransformOrigin="0.5,0.5" Height="10.49" VerticalAlignment="Top">
             <Path.RenderTransform>
-                <CompositeTransform ScaleX="-1" Rotation="4.792" ScaleY="-1"/>
+                <CompositeTransform Rotation="-175.208"/>
             </Path.RenderTransform>
             <Path.Fill>
                 <LinearGradientBrush EndPoint="0.882,0.105" StartPoint="0.244,0.743">

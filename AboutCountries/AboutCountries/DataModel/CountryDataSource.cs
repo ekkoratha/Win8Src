@@ -155,6 +155,13 @@ namespace AboutCountries.Data
             set { this.SetProperty(ref this._capital, value); }
         }
 
+        private string _localTime = string.Empty;
+        public string LocalTime
+        {
+            get { return this._localTime; }
+            set { this.SetProperty(ref this._localTime, value); }
+        }
+
         private string _startDate = string.Empty;
         public string StartDate
         {
@@ -202,13 +209,6 @@ namespace AboutCountries.Data
         {
             get { return this._dialCode; }
             set { this.SetProperty(ref this._dialCode, value); }
-        }
-
-        private string _localTime = string.Empty;
-        public string LocalTime
-        {
-            get { return this._localTime; }
-            set { this.SetProperty(ref this._localTime, value); }
         }
 
         private string _language = string.Empty;

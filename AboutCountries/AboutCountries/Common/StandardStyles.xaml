@@ -1641,13 +1641,12 @@
 
     <!-- Item templates -->
 
+    <!-- Prasanth Main Page-->
     <!-- Grid-appropriate 250 pixel square item template as seen in the GroupedItemsPage and ItemsPage -->
     <DataTemplate x:Key="Standard250x250ItemTemplate">
-        <Grid HorizontalAlignment="Left" Width="150" Height="150">
-            <!--<Grid HorizontalAlignment="Left" Width="250" Height="250">-->
-             <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}">
-                <!--<Image Source="{Binding Image}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>-->
-                <Image Source="{Binding Img}" Width="40" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" AutomationProperties.Name="{Binding Title}"/>
+        <Grid HorizontalAlignment="Left" Width="150" Height="150">            
+             <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}">                
+                <Image HorizontalAlignment="Left" Source="{Binding MapImage}" Width="80" Height="52" VerticalAlignment="Top"  AutomationProperties.Name="{Binding Title}"/>
             </Border>
             <StackPanel VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}">
                 <TextBlock Text="{Binding Name}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource SubtitleTextStyle}" Height="40" Margin="15,0,15,0"/>
@@ -1664,7 +1663,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="110" Height="110">
-                <Image Source="{Binding Img}" Width="40" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" AutomationProperties.Name="{Binding Name}"/>
+                <Image Source="{Binding MapImage}" Width="40" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" AutomationProperties.Name="{Binding Name}"/>
                 <!--<Image Source="{Binding Img}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>-->
             </Border>
             <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="10,0,0,0">
@@ -1684,7 +1683,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="110" Height="110">
-                <Image Source="{Binding Img}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>
+                <Image Source="{Binding MapImage}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>
             </Border>
             <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="10,0,0,0">
                 <TextBlock Text="{Binding Name}" Style="{StaticResource TitleTextStyle}" TextWrapping="NoWrap"/>
@@ -1698,19 +1697,21 @@
         List-appropriate 80 pixel high item template as seen in the SplitPage when Filled, and
         the following pages when snapped: GroupedItemsPage, GroupDetailPage, and ItemsPage
     -->
+    <!-- Prasanth Snapped Page-->
     <DataTemplate x:Key="Standard80ItemTemplate">
         <Grid Margin="6">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="60" Height="60">
-                <Image Source="{Binding Img}" Stretch="UniformToFill"/>
+            <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="60" Height="50">
+                <!--<Image Source="{Binding MapImage}" Stretch="UniformToFill"/>-->
+                <Image Source="{Binding MapImage}" Width="60" Height="50" />
             </Border>
             <StackPanel Grid.Column="1" Margin="10,0,0,0">
 
                 <TextBlock Text="{Binding Name}" Style="{StaticResource ItemTextStyle}" MaxHeight="40"/>
-                <!--<TextBlock Text="{Binding Subtitle}" Style="{StaticResource CaptionTextStyle}" TextWrapping="NoWrap"/>-->
+                <TextBlock Text="{Binding Language}" Style="{StaticResource CaptionTextStyle}" TextWrapping="NoWrap"/>
                 <TextBlock Text="{Binding Capital}" Style="{StaticResource CaptionTextStyle}" TextWrapping="NoWrap"/>
             </StackPanel>
         </Grid>
@@ -1724,7 +1725,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Margin="0,0,0,10" Width="40" Height="40">
-                <Image Source="{Binding Img}" Stretch="UniformToFill"/>
+                <Image Source="{Binding MapImage}" Stretch="UniformToFill"/>
             </Border>
             <StackPanel Grid.Column="1" Margin="10,-10,0,0">
                 <TextBlock Text="{Binding Name}" Style="{StaticResource BodyTextStyle}" TextWrapping="NoWrap"/>
